@@ -1,0 +1,763 @@
+@font-face {
+    font-family: 'Bauhaus';
+    src: url('./bauhaus-webfont/BauhausRegular.woff') format('truetype');
+    src: url('./bauhaus-webfont/BauhausBold.woff') format('truetype');
+    src: url('./bauhaus-webfont/BauhausBoldItalic.woff') format('truetype');
+    src: url('./bauhaus-webfont/BauhausRegular.woff') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+a:link {
+    text-decoration: none;
+}
+
+a {
+    color: white;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-size: contain;
+    background-image: url("image/milky-way.jpg");
+    background-image: url("../image/milky-way.jpg");
+    font-family: 'Arial Rounded MT Bold', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+h1 {
+    font-family: Bauhaus;
+    font-weight: 600;
+    font-size: 2.5rem
+}
+
+h2 {
+    font-family: Bauhaus;
+    font-weight: 600;
+    font-size: 2.3rem
+}
+
+p {
+    text-align: justify;
+    color: #ffffff;
+    line-height: 1.6;
+    width: 80%;
+}
+
+span {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/*--------------------navbar----------------------*/
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    padding: 30px 0;
+    flex-wrap: wrap;
+}
+
+.nav-button {
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.nav-button:hover {
+    background: hsla(17, 100%, 28%, 0.466);
+}
+
+
+/*-----------------------acceuil-----------------------------------------*/
+
+#body-accueil {
+    margin: 0;
+    padding: 0;
+    background-size: contain;
+    color: rgb(255, 255, 255);
+    animation-name: bodyAnimation;
+    animation-duration: 10s;
+    background-image: url("../image/milky-way.jpg");
+    transition: 100s;
+}
+
+/*@keyframes bodyAnimation {
+    from {
+        /*background-image: url("image/milky-way.jpg");
+        background-color: black;
+    }
+
+    to {
+        background-image: url("image/milky-way.jpg");
+    }
+}*/
+
+.hero {
+    text-align: center;
+    line-height: 1.4;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    font-size: xxx-large;
+}
+
+.hero span {
+    display: block;
+    opacity: 0;
+    transform: translateY(-200px);
+    animation: slideIn 3.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about {
+    z-index: 7;
+    margin-top: 50rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-bottom: 50rem;
+}
+
+.about p {
+    width: 100%;
+}
+
+/*--------------------------projet card---------------------------------*/
+
+.projet-intro {
+    max-width: 80%;
+    margin: 200px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.projet-intro h1 {
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 15rem;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    background: #000000;
+}
+
+/*-------Image igerie-----------------*/
+
+.project-card h3 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.project-card p {
+    color: white;
+    text-align: left;
+    width: 100%;
+    padding-left: 5%;
+}
+
+.project-tag {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+.project-tag span {
+    border: 2px solid white;
+    font-size: 0.6rem;
+    border-radius: 50px;
+    padding: 8px;
+}
+
+#Cewe-project-card {
+    object-fit: contain;
+    height: 221px;
+}
+
+/*---------------------------------PWardrobe---------------------------------------------------*/
+
+.intro {
+    margin: 200px 0 10% 0;
+
+}
+
+.intro h1 {
+    text-align: center;
+}
+
+.intro p {
+    width: 85%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 50px 0 100px 0;
+}
+
+
+/* Masquer les boutons radio */
+input[type="radio"] {
+    display: none;
+}
+
+.slides {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 100px 0 0 0;
+    gap: 20rem;
+}
+
+.slide {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* titres */
+.slide.s1 h2,
+.s2 h2,
+.s3 h2 {
+    margin: 5% 0px 5% 0px;
+}
+
+/* textes */
+.slide.s1 p,
+.s2 p,
+.s3 p {
+    width: 80%;
+    margin: 0px 0px 5% 0px;
+}
+
+
+.img-slide-1 {
+    width: 100%;
+    height: 210px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.logo-div-slide {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 100%;
+    gap: 10%;
+}
+
+.logo-div-slide img {
+    width: 35%;
+    object-fit: contain;
+    border: solid;
+    border-radius: 100%;
+    background-color: #FD9898;
+    padding: 15px 20px 15px 5px;
+}
+
+.logo-div-slide-bis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+.logo-div-opacity {
+    background-color: #fd989879;
+}
+
+.logo-div-slide-bis img {
+    width: 70%;
+    object-fit: contain;
+    border: solid;
+    border-radius: 50px;
+    background-color: #FD9898;
+    padding: 15px 30px 15px 30px;
+    margin-top: 20px;
+}
+
+/* slide 2 */
+
+.slide.s2 img {
+    width: 400px;
+    height: 450px;
+    object-fit: cover;
+}
+
+.stickers-slide img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    image-rendering: auto;
+}
+
+/*---------------------------------Ca va pas la tech---------------------------------------------------*/
+.intro-tech {
+    margin: 200px 0 250px 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-tech h1 {
+    text-align: center;
+}
+
+.section-tech {
+    text-align: center;
+    padding: 80px 5% 60px 5%;
+    max-width: 1300px;
+    margin: auto;
+    margin: 100px 0 100px 0;
+}
+
+.section-tech h2 {
+    margin-bottom: 40px;
+}
+
+.section-tech p {
+    margin: 0 auto 100px;
+    max-width: 1000px;
+    text-align: justify;
+}
+
+.gallery-tech img {
+    width: 20%;
+    height: fit-content;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.gallery-tech img:hover {
+    transform: scale(1.2);
+}
+
+.gallery-tech {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+.tech-logo {
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+.green-logo {
+    background-color: #00000070;
+    padding: 15px 15px 15px 15px;
+    border-radius: 20px;
+}
+
+.black-logo {
+    background-color: #09317a70;
+    padding: 15px 15px 15px 15px;
+    border-radius: 20px;
+}
+
+#gallery-tech-id {
+    display: flex;
+    flex-direction: row;
+}
+
+.tech-logo img {
+    width: 35%;
+}
+
+
+
+/*---------------------------------Igerie---------------------------------------------------*/
+
+.igerie-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.igerie-title,
+.igerie-subtitle {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.igerie-logo-label {
+    text-align: center;
+    width: 100%;
+}
+
+.igerie-description {
+    max-width: 80%;
+    margin: auto;
+    text-align: justify;
+    color: #ccc;
+}
+
+#igerie-des {
+    text-align: center;
+}
+
+.igerie-logo-group {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.igerie-logo-block {
+    text-align: center;
+}
+
+.igerie-logo-label {
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.igerie-logo-img {
+    margin-top: 10px;
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+#igerie-logo-clair {
+    background-color: rgba(255, 255, 255, 0.76);
+    border-radius: 50px;
+    padding: 50px 0px 50px 0px;
+}
+
+#igerie-img-bigger {
+    width: 350px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.igerie-mockup-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.igerie-mockup-placeholder {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.igerie-mockup-placeholder:hover {
+    transform: scale(1.3);
+}
+
+
+/*---------------------------------photos---------------------------------------------------*/
+
+
+
+/*---------------------------My thailand--------------------*/
+
+.mythailand-header {
+    max-width: 80%;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.mythailand-header h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.mythailand-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.mythailand-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.mythailand-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: #d3d3d3;
+}
+
+
+
+
+/*----------------------------------------------MEDIAS QUERIES---------------------------------*/
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1, 8;
+    }
+
+    h3 {
+        font-size: x-large;
+    }
+
+    p {
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        flex-wrap: nowrap;
+        padding: 30px 0;
+        gap: 1rem;
+    }
+
+    .nav-button {
+        border: 2px solid white;
+        background: transparent;
+        color: white;
+        padding: 8px;
+        border-radius: 50px;
+        font-size: 0.7rem;
+        transition: none;
+    }
+
+    /*--------------------acceuil*------------------------*/
+    .hero {
+        width: 80%;
+        font-size: xx-large;
+    }
+
+    .about {
+        margin: 50rem auto;
+        width: 80%;
+    }
+
+    /*--------------------projet*------------------------*/
+
+    .projects {
+        gap: 120px;
+    }
+
+    .projet-intro h1 {
+        padding-bottom: 0;
+    }
+
+    .project-tag {
+        align-items: center;
+        gap: 10px;
+    }
+
+    .project-tag span {
+        width: max-content;
+    }
+
+    /*-----------Ca va pas la tech*----------*/
+    .intro-tech p {
+        width: 80%;
+    }
+
+    .description {
+        width: 80%;
+    }
+
+    .intro {
+        width: 80%;
+    }
+
+    #gallery-tech-id {
+        flex-direction: column;
+    }
+
+    .tech-logo img {
+        width: 65%;
+        margin-bottom: 50px;
+    }
+
+    .gallery-tech {
+        gap: 100px;
+        flex-wrap: wrap;
+    }
+
+    .gallery-tech img {
+        width: 80%;
+        transition: none;
+    }
+
+    .gallery-tech img:hover {
+        transform: none;
+    }
+
+    /*--------Wardrobe----------------*/
+
+    .intro {
+        width: 100%;
+    }
+
+    .intro h1 {
+        margin: auto;
+        width: 85%;
+    }
+
+    .intro p {
+        transform: none;
+        position: static;
+        margin: 100px auto;
+        width: 80%;
+    }
+
+    .slides {
+        gap: 15rem;
+    }
+
+    .slide.s1 h2,
+    .s2 h2,
+    .s3 h2 {
+        margin: 5% 0px 10% 0px;
+    }
+
+    .slide.s1 p,
+    .s2 p,
+    .s3 p {
+        margin: 0px 0px 25% 0px;
+    }
+
+    .img-slide-1 {
+
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        gap: 10rem;
+    }
+
+    .logo-div-slide {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        height: 100%;
+        gap: 3rem;
+    }
+
+    .logo-div-slide img {
+        width: 80%;
+        padding: 10px 18px 10px 10px;
+    }
+
+    .logo-div-slide-bis {
+        width: 80%;
+        gap: 3rem;
+    }
+
+    .logo-div-slide-bis img {
+        width: 90%;
+        padding: 15px 30px 15px 30px;
+    }
+
+    .slide.s2 img {
+        width: 300px;
+    }
+
+    /*------------Igerie------------*/
+
+    .igerie-logo-group {
+        gap: 90px;
+    }
+
+    .igerie-mockup-grid {
+        gap: 0px;
+    }
+
+    .igerie-mockup-placeholder {
+        transition: none;
+    }
+
+    .igerie-mockup-placeholder:hover {
+        transform: none;
+    }
+
+    /*------------Photos------------*/
+    .project-card:hover {
+        transform: none;
+    }
+
+    /*-----------My thailand----------------*/
+    .mythailand-img {
+        width: 10rem;
+    }
+}
