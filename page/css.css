@@ -20,11 +20,15 @@ a {
 body {
     margin: 0;
     padding: 0;
-    background-size: contain;
     background-image: url("image/milky-way.jpg");
     background-image: url("../image/milky-way.jpg");
     font-family: 'Arial Rounded MT Bold', sans-serif;
     color: rgb(255, 255, 255);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 
 h1 {
@@ -82,12 +86,14 @@ span {
 #body-accueil {
     margin: 0;
     padding: 0;
-    background-size: contain;
     color: rgb(255, 255, 255);
     animation-name: bodyAnimation;
     animation-duration: 10s;
     background-image: url("../image/milky-way.jpg");
     transition: 100s;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /*@keyframes bodyAnimation {
@@ -600,6 +606,7 @@ input[type="radio"] {
     .hero {
         width: 80%;
         font-size: xx-large;
+        transform: translate(-50%, -200%);
     }
 
     .about {
