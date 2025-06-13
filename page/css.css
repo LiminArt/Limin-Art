@@ -565,6 +565,14 @@ input[type="radio"] {
 
 @media (max-width: 768px) {
 
+    body {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 100vh;
+        background-attachment: fixed;
+    }
+
     h1 {
         font-size: 2rem;
     }
