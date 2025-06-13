@@ -386,6 +386,7 @@ input[type="radio"] {
     height: auto;
     object-fit: contain;
     transition: transform 0.3s ease;
+    align-items: flex-start;
 }
 
 .gallery-tech img:hover {
@@ -661,7 +662,8 @@ input[type="radio"] {
     }
 
     .gallery-tech img {
-        width: 80%;
+        width: 300px;
+        height: 185px;
         transition: none;
     }
 
